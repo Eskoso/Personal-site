@@ -1,0 +1,223 @@
+:root {
+    --bg-clr: 22, 22, 22;
+    --text-clr: #E0E0E0;
+    --text-secondary-clr: #cecece;
+    --secondary-clr: #202020;
+    --gray-clr: 126, 126, 126;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-clr);
+    background: rgb(var(--bg-clr));
+    background-image: radial-gradient(var(--secondary-clr) 1px, transparent 0);
+    background-size: 20px 20px;
+    background-position: -19px -19px;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--secondary-clr);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav > ul {
+    display: flex;
+    gap: 25px;
+    margin-right: 4rem;
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+nav > ul > li::after {
+    content: "/";
+    margin-left: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    color: rgb(var(--gray-clr));
+}
+
+nav > ul > li:last-child::after{
+    content: "";
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.mail > .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-clr);
+    display: flex;
+    justify-content: center;
+}
+
+.mail > .icon > svg {
+    width: 20px;
+    height: auto;
+    fill: var(--text-clr);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 170px;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary-clr);
+}
+
+ .portrait{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.btn-main {
+    background-color: var(--secondary-clr);
+    outline: 1px solid transparent;
+    border: 1px rgba(var(--gray-clr), .3) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 18px 45px;
+    color: rgb(var(--gray-clr));
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: all 200ms ease ;
+}
+
+.btn-main span svg {
+    height: 15px;
+    width: auto;
+    fill: rgb(var(--gray-clr));
+}
+
+.btn-main:hover {
+    background-color: rgba(var(--bg-clr));
+    scale: 1.01;
+}
+
+.main-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-card {
+    background-color: var(--secondary-clr);
+    outline: 1px solid transparent;
+    border: 1px rgba(var(--gray-clr), .3) solid;
+    color: var(--text-secondary-clr);
+    padding: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-content: end center;
+    transition: all 200ms ease;
+}
+
+.main-card > span {
+    height: 150px;
+    display: grid;
+    place-content: end start;
+    padding-bottom: 20px;
+}
+
+.main-card > span > svg {
+    width: auto;
+    height: 25px;
+    fill: rgba(var(--gray-clr), .4);
+}
+
+.main-card > p {
+    margin-top: 10px;
+    color: rgb(var(--gray-clr));
+}
+
+.main-card:hover {
+    box-shadow: 0px 0px 15px rgba(var(--gray-clr), 0.2);
+    scale: 1.01;
+    cursor:help;
+}
+
+.gradient-text {
+    margin: 100px 0 50px 0;
+    background: linear-gradient(90deg, rgb(199, 199, 199) 0%, rgb(199, 199, 199) 15%, rgba(210,210,210,1) 29%, rgba(199,199,199,1) 38%, rgb(101, 101, 101) 75%);
+    background-clip: text;
+}
+
+.gradient-text > h1 {
+    max-width: 600px;
+    color: transparent;
+}
+
+.middle-content {
+    background-color: var(--secondary-clr);
+    width: 100%;
+    height: 250px;
+    margin-top: 100px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.middle-content > .language-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 90%;
+}
+
+.middle-content > .language-item > svg {
+    width: 40%;
+    height: auto;
+    fill: #000;
+}
+
+.middle-content > .language-item > svg > rect {
+    fill: var(--text-secondary-clr);
+}
