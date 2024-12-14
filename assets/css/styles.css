@@ -9,6 +9,7 @@
 *, *::after, *::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -42,11 +43,14 @@ nav {
 nav > ul {
     display: flex;
     gap: 25px;
-    margin-right: 4rem;
 }
 
 nav > ul > li {
     list-style: none;
+}
+
+nav > ul > li > a:hover {
+    color: var(--text-secondary-clr);
 }
 
 nav > ul > li::after {
@@ -61,6 +65,7 @@ nav > ul > li::after {
 nav > ul > li:last-child::after{
     content: "";
 }
+
 
 .mail {
     display: flex;
@@ -176,9 +181,8 @@ main {
 }
 
 .main-card:hover {
-    box-shadow: 0px 0px 15px rgba(var(--gray-clr), 0.2);
-    scale: 1.01;
-    cursor:help;
+    box-shadow: 0px 0px 15px rgba(var(--gray-clr), 0.1);
+    cursor: help;
 }
 
 .gradient-text {
@@ -190,34 +194,73 @@ main {
 .gradient-text > h1 {
     max-width: 600px;
     color: transparent;
+    padding: 10px;
+}
+
+.line {
+    background-color: var(--secondary-clr);
+    height: 250px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+
 }
 
 .middle-content {
-    background-color: var(--secondary-clr);
-    width: 100%;
-    height: 250px;
-    margin-top: 100px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
+    display: inline-block;
+    white-space: nowrap;
+    height: 100%;
+    text-align: center;
+    animation: scroll 30s linear infinite;
+}
+
+.line:hover > .middle-content {
+    animation-play-state: paused;
 }
 
 .middle-content > .language-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    height: 90%;
+    display: inline-block;
+    height: 100%;
+    min-width: 300px;
+    max-width: 350px;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 .middle-content > .language-item > svg {
-    width: 40%;
-    height: auto;
+    width: auto;
+    height: 100%;
     fill: #000;
 }
 
 .middle-content > .language-item > svg > rect {
     fill: var(--text-secondary-clr);
 }
+
+.footer {
+    background-color: var(--secondary-clr);
+    height: 80px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(var(--gray-clr));
+}
+
+.footer > .socials > .instagram > a > svg{
+    height: auto;
+    width: 25px;
+} 
