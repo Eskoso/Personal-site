@@ -105,6 +105,7 @@ main {
     align-items: center;
     justify-content: center;
     color: var(--text-secondary-clr);
+    margin-bottom: 2rem;
 }
 
  .portrait{
@@ -124,19 +125,26 @@ main {
     border: 1px rgba(var(--gray-clr), .3) solid;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
     padding: 18px 45px;
     color: rgb(var(--gray-clr));
-    margin-top: 3rem;
+    margin-top: 1rem;
     cursor: pointer;
     transition: all 200ms ease ;
+    font-weight: 700;
+    max-width: 250px;
+}
+
+.btn-main span {
+    display: flex;
+    align-items: center;
 }
 
 .btn-main span svg {
     height: 15px;
     width: auto;
     fill: rgb(var(--gray-clr));
+    
 }
 
 .btn-main:hover {
@@ -190,15 +198,17 @@ main {
     margin: 100px 0 50px 0;
     background: linear-gradient(90deg, rgb(199, 199, 199) 0%, rgb(199, 199, 199) 15%, rgba(210,210,210,1) 29%, rgba(199,199,199,1) 38%, rgb(101, 101, 101) 75%);
     background-clip: text;
+    text-align: center;
 }
 
-.gradient-text > h1 {
+.gradient-text > h2 {
+    font-size: 2rem;
     max-width: 600px;
     color: transparent;
     padding: 10px;
 }
 
-.line {
+.slider {
     background-color: var(--secondary-clr);
     height: 250px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -218,7 +228,7 @@ main {
     animation: scroll 30s linear infinite;
 }
 
-.line:hover > .middle-content {
+.slider:hover > .middle-content {
     animation-play-state: paused;
 }
 
@@ -248,6 +258,20 @@ main {
 .middle-content > .language-item > svg > rect {
     fill: var(--text-secondary-clr);
 }
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(var(--gray-clr), .3);
+    margin-top: 100px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .footer {
     background-color: var(--secondary-clr);
