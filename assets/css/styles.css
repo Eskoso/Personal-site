@@ -285,7 +285,12 @@ section {
     color: rgb(var(--gray-clr));
 }
 
-.footer > .socials > .instagram > a > svg{
+.footer > .socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer > .socials > .social-item > a > svg{
     height: auto;
     width: 25px;
 } 
