@@ -7,6 +7,29 @@
     <title>Walter - Om Mig</title>
 </head>
 <body>
+    <div class="loading">
+        <div class="loader">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+      </div>
+
     <nav>
         <div class="mail">
             <div class="icon">
@@ -15,30 +38,30 @@
             <span>MinMail@gmail.com</span>
         </div>
         <ul>
-            <li><a href="index.html" class="active">Hem</a></li>
-            <li><a href="about-me.html">Om mig</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li title="hem"><a href="index.html" class="active">Hem</a></li>
+            <li title="om mig"><a href="about-me.html">Om mig</a></li>
+            <li title="CV"><a href="cv.html">CV</a></li>
+            <li title="kontakt"><a href="contact.html">Kontakt</a></li>
         </ul>
     </nav>
 
 
 <main class="aboutme-main">
-    <section class="title">
+    <section class="title" >
         <h1>ABOUT ME</h1>
     </section>
 
-    <section class="info-me">
+    <section class="info-me" >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, enim optio delectus deserunt iusto exercitationem soluta dolor, impedit, fugit vitae possimus et architecto eum distinctio adipisci quod placeat quos sit.</p>
     </section>
 
-    <section class="old">
+    <section class="old" >
         <h2>17</h2><p>years old</p>
     </section>
 
     <section class="website">
-        <a href="https://cornrevolution.resn.global/" target="_blank"><img src="assets/images/snygg-webbsida.png" alt="website"></a>
-        <a class="btn-main" href="https://cornrevolution.resn.global/">
+        <a href="https://cornrevolution.resn.global/" target="_blank" title="preview"><img src="assets/images/snygg-webbsida.png" alt="website"></a>
+        <a class="btn-main" href="https://cornrevolution.resn.global/" title="Corn Revolution">
             Corn Revolution - webbsida
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
@@ -77,5 +100,7 @@
     </div>
 </footer>
 
+
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>
