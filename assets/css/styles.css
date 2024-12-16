@@ -91,11 +91,11 @@ nav > ul > li:last-child::after{
     fill: var(--text-clr);
 }
 
-main {
+.index-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 170px;
+    margin-top: 85px;
 }
 
 .me {
@@ -106,6 +106,7 @@ main {
     justify-content: center;
     color: var(--text-secondary-clr);
     margin-bottom: 2rem;
+    margin-top: 90px;
 }
 
  .portrait{
@@ -264,6 +265,41 @@ main {
     width: 100%;
     background-color: rgba(var(--gray-clr), .3);
     margin-top: 100px;
+    position: relative;
+}
+
+.line.cv::after {
+    content: "Cv";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: var(--secondary-clr);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: .7em;
+    right: 50%;
+    transform: translate(50%, -40%);
+    rotate: -0.010turn;
+}
+
+.line.kontakt::after {
+    content: "Kontakt";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: var(--secondary-clr);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: .7em;
+    right: 50%;
+    transform: translate(50%, -60%);
+    rotate: 0.010turn;
 }
 
 section {
@@ -294,3 +330,123 @@ section {
     height: auto;
     width: 25px;
 } 
+
+.aboutme-main {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 85px;
+}
+
+.title {
+    margin-top: -2rem;
+    font-size: 16vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    width: 100%;
+}
+
+.info-me {
+    width: 50%;
+    font-family: 'impact', sans-serif;
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    border-left: rgba(var(--gray-clr), .3) solid 1px;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    font-size: 1em;
+    position: relative;
+}
+
+.info-me::after {
+    content: "Om mig själv";
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    bottom: -1px;
+    font-family: 'Impact', sans-serif;
+    font-size: 2em;
+    color: var(--text-clr);
+}
+
+
+.old {
+    width: 50%;
+    font-family: 'impact', sans-serif;
+    border-left: rgba(var(--gray-clr), .3) solid 1px;
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    white-space: nowrap;
+    font-size: .8em;
+    position: relative;
+    gap: 1rem;
+    color: var(--text-secondary-clr);
+}
+
+.old::after {
+    content: "Hur gammal?";
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    bottom: -1px;
+    font-family: 'Impact', sans-serif;
+    font-size: 2em;
+    color: var(--text-clr);
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+}
+
+.old h2 {
+    font-family: 'impact', sans-serif;
+    font-size: 15vw;
+    margin-top: -2rem;
+    color: var(--text-clr);
+}
+
+
+.website {
+    width: 50%;
+    font-family: 'impact', sans-serif;
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    border-left: rgba(var(--gray-clr), .3) solid 1px;
+    height: 530px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+    font-size: .8em;
+    position: relative;
+    gap: 1rem;
+    color: var(--text-secondary-clr);
+}
+
+.website::after {
+    content: "Väldesignad Webbsida 👏";
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    bottom: -1px;
+    font-family: 'Impact', sans-serif;
+    font-size: 2em;
+}
+
+.website > a > img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav > ul {
+        display: none;
+    }
+}
