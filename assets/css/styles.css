@@ -192,7 +192,7 @@ nav > ul > li:last-child::after{
 
 .main-card:hover {
     box-shadow: 0px 0px 15px rgba(var(--gray-clr), 0.1);
-    cursor: help;
+    cursor: default;
 }
 
 .gradient-text {
@@ -218,7 +218,7 @@ nav > ul > li:last-child::after{
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
-
+    user-select: none;
 }
 
 .middle-content {
@@ -467,6 +467,24 @@ section {
     display: inline-block;
     z-index: 9999;
   }
+
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border: 1px rgb(var(--gray-clr), .5) solid;
+    background-color: rgb(var(--gray-clr), .3);
+    border-radius: 50%;
+    pointer-events: none; /* Make it ignore mouse interactions */
+    transition: transform 0.1s linear, background-color 200ms ease, width 200ms ease, height 200ms ease; /* Smooth movement */
+    z-index: 9999;
+}
+
+.cursor.clicked {
+    background-color: rgb(var(--gray-clr), .5); /* Change to a lighter, more white-ish color */
+}
 
 
 
