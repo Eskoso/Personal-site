@@ -130,10 +130,10 @@ nav > ul > li:last-child::after{
     padding: 18px 45px;
     color: rgb(var(--gray-clr));
     margin-top: 1rem;
-    cursor: pointer;
     transition: all 200ms ease ;
     font-weight: 700;
     max-width: 250px;
+    cursor: none;
 }
 
 .btn-main span {
@@ -480,6 +480,17 @@ section {
     pointer-events: none; /* Make it ignore mouse interactions */
     transition: transform 0.1s linear, background-color 200ms ease, width 200ms ease, height 200ms ease; /* Smooth movement */
     z-index: 9999;
+    display: grid;
+    place-content: center;
+}
+
+.cursor > svg {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+    fill: rgb(var(--gray-clr), .6);
+    transition: opacity 200ms ease;
 }
 
 .cursor.clicked {
