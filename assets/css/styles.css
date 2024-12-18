@@ -133,7 +133,6 @@ nav > ul > li:last-child::after{
     transition: all 200ms ease ;
     font-weight: 700;
     max-width: 250px;
-    cursor: none;
 }
 
 .btn-main span {
@@ -497,7 +496,59 @@ section {
     background-color: rgb(var(--gray-clr), .5); /* Change to a lighter, more white-ish color */
 }
 
+.container {
+    position: relative;
+    padding-top: 300px;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
 
+.container::after {
+    display: flex;
+    justify-content: center;
+    content: "kontakt";
+    position: absolute;
+    width: 100%;
+    font-size: 15vw;
+    font-family: "impact", sans-serif;
+    top: 100px;
+    opacity: .1;
+    z-index: -1;
+}
+
+.right-section {
+    width: 50%;
+    height: 60%;
+    padding: 10px;
+    background-color: rgb(var(--gray-clr), .3);
+    border-radius: 20px;
+    backdrop-filter: blur(1000px);
+}
+
+.right-section > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.right-section > .form > input, .right-section > .form > textarea {
+    width: 100%;
+    border-radius: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: rgb(var(--gray-clr), .1);
+    border: 1px solid rgb(var(--gray-clr), .3);
+    padding: 10px 20px ;
+    color: var(--text-clr);
+}
+
+.right-section > .form > input {
+    height: 50px;
+}
 
 @media only screen and (max-width: 600px) {
     nav > ul {

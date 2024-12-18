@@ -43,12 +43,14 @@ document.querySelectorAll("[data-hover-enabled]").forEach((element) => {
     element.addEventListener("mouseenter", () => {
         ball.style.width = "55px"; 
         ball.style.height = "55px"
+        element.style.cursor = "none";
         svg.style.opacity = 100;
     });
     
     element.addEventListener("mouseleave", () => {
         ball.style.width = "45px"; 
         ball.style.height = "45px"
+        element.style.cursor = "default";
         svg.style.opacity = 0;
     });
 });
