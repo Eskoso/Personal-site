@@ -411,6 +411,10 @@ section {
     color: var(--text-clr);
 }
 
+.old p {
+    font-size: 2.5em;
+}
+
 
 .website {
     width: 50%;
@@ -421,12 +425,17 @@ section {
     padding: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     white-space: nowrap;
     font-size: .8em;
     position: relative;
     gap: 1rem;
     color: var(--text-secondary-clr);
+}
+
+.website.project {
+    height: 600px;
 }
 
 .website::after {
@@ -440,8 +449,26 @@ section {
     font-size: 2em;
 }
 
+.website.project::after {
+    content: "Eget projekt 👏";
+    border-bottom: rgba(var(--gray-clr), .3) solid 1px;
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    bottom: -1px;
+    font-family: 'Impact', sans-serif;
+    font-size: 2em;
+}
+
 .website > a > img {
     width: 100%;
+    max-width: 700px;
+}
+
+.website > p {
+    font-size: 1.5em;
+    width: 100%;
+    text-wrap: wrap;
 }
 
 
@@ -550,8 +577,52 @@ section {
     height: 50px;
 }
 
+.back-btn {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     nav > ul {
         display: none;
     }
+    .title {
+        margin-top: -1rem;
+    }
+    .website, .old, .info-me {
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    .website::after, .old::after, .info-me::after {
+        display: none;
+    }
+    .old > h2 {
+        font-size: 20em;
+    }
+    .old > p {
+        font-size: 3em;
+    }
+    .back-btn {
+        display: block;
+        width: 25px;
+    }
+    
+    .back-btn > a {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        fill: var(--text-clr);
+    }
+    
+    .back-btn > a > svg {
+        width: 100%;
+        height: 100%;
+    }
+    .cursor {
+        display: none;
+    }
+    .middle-content {
+        animation-duration: 15s;
+    }
 }
+
