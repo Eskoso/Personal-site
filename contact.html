@@ -7,6 +7,28 @@
     <title>Walter - Kontakt</title>
 </head>
 <body>
+    <div class="loading">
+        <div class="loader">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+      </div>
     <nav>
         <div class="mail">
             <div class="icon">
@@ -27,56 +49,27 @@
         </ul>
     </nav>
 
-    
-    <div class="container">
-        <div class="left-containter">
-            <h2>Kontakta mig</h2>
-            <p>Har du några frågor eller vill du veta mer? Tveka inte att höra av dig!</p>
+    <section class="get-in-touch">
+        <h1 class="title">kontakt</h1>
+        <form class="contact-form row">
+           <div class="form-field col x-50">
+               <label for="name">Name: </label>
+              <input id="name" class="input-text" placeholder="Name" type="text" required>
+           </div>
+           <div class="form-field col x-50">
+               <label for="email">E-mail: </label>
+              <input id="email" class="input-text" placeholder="email" type="email" required>
+           </div>
+           <div class="form-field col x-100">
+               <label for="message">Message: </label>
+               <textarea id="message" class="input-text textarea" placeholder="Message" ="text" required></textarea>
+           </div>
+           <div class="form-field col x-100 align-center">
+              <input class="submit-btn" data-hover-enabled="true" type="submit" value="Submit">
+           </div>
+        </form>
+     </section>
 
-            <div class="contact-card">
-                <div class="icon">
-
-                </div>
-                <h2>Maila mig</h2>
-                <p>minmail@gmail.com</p>
-                <a href="mailto:minmail@gmail.com" class="to">
-
-                </a>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">
-
-                </div>
-                <h2>Maila mig</h2>
-                <p>minmail@gmail.com</p>
-                <a href="mailto:minmail@gmail.com" class="to">
-                    
-                </a>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">
-
-                </div>
-                <h2>Maila mig</h2>
-                <p>minmail@gmail.com</p>
-                <a href="mailto:minmail@gmail.com" class="to">
-                    
-                </a>
-            </div>
-        </div>
-
-        <div class="right-section">
-            <div class="form">
-                <input type="text" class="name" placeholder="Namn">
-                <input type="text" class="email" placeholder="Email">
-                <textarea name="" id="" placeholder="Meddelande" ></textarea>
-            </div>
-        </div>
-
-
-    </div>
-
+     <script src="/assets/scripts/script.js"></script>
 </body>
 </html>

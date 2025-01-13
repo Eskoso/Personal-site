@@ -3,6 +3,7 @@
     --text-clr: #E0E0E0;
     --text-secondary-clr: #cecece;
     --secondary-clr: #202020;
+    --dark-clr: #000;
     --gray-clr: 126, 126, 126;
 }
 
@@ -523,63 +524,104 @@ section {
     background-color: rgb(var(--gray-clr), .5); /* Change to a lighter, more white-ish color */
 }
 
-.container {
-    position: relative;
-    padding-top: 300px;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.container::after {
-    display: flex;
-    justify-content: center;
-    content: "kontakt";
-    position: absolute;
-    width: 100%;
-    font-size: 15vw;
-    font-family: "impact", sans-serif;
-    top: 100px;
-    opacity: .1;
-    z-index: -1;
-}
-
-.right-section {
-    width: 50%;
-    height: 60%;
-    padding: 10px;
-    background-color: rgb(var(--gray-clr), .3);
-    border-radius: 20px;
-    backdrop-filter: blur(1000px);
-}
-
-.right-section > .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.right-section > .form > input, .right-section > .form > textarea {
-    width: 100%;
-    border-radius: 20px;
-    resize: none;
-    border: none;
-    outline: none;
-    background-color: rgb(var(--gray-clr), .1);
-    border: 1px solid rgb(var(--gray-clr), .3);
-    padding: 10px 20px ;
-    color: var(--text-clr);
-}
-
-.right-section > .form > input {
-    height: 50px;
-}
-
 .back-btn {
     display: none;
 }
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row {
+    margin: -20px 0;
+  }
+  
+  .col {
+    padding: 0 20px;
+    float: left;
+    box-sizing: border-box;
+  }
+  
+  .col.x-50 {
+    width: 50%;
+  }
+  
+  .col.x-100 {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .content-wrapper {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  .get-in-touch {
+    height: 100vh;
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+  
+  .get-in-touch .title {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form .form-field {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    outline: 1px transparent solid;
+    border: none;
+    background: var(--secondary-clr);
+    padding: 10px;
+    color: var(--text-secondary-clr);
+  }
+
+  .contact-form .textarea {
+    height: 100px !important;
+    resize: none;
+  }
+
+  .align-center {
+    display: grid;
+    place-content: center;
+  }
+  
+  .contact-form .submit-btn {
+    display: inline-block;
+    background-color: var(--dark-clr);
+    color: var(--text-clr);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+
+
 
 @media only screen and (max-width: 600px) {
     nav > ul {

@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
 
 const ball = document.createElement("div");
 ball.className = "cursor"
+
 document.body.appendChild(ball);
 
 const svgElement = `
