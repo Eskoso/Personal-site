@@ -67,3 +67,16 @@ document.addEventListener("mouseup", () => {
 
 var copy = document.querySelector(".middle-content").cloneNode(true);
 document.querySelector(".slider").appendChild(copy);
+
+
+let contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+    
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        alert("Tack för ditt meddelande, tyvärr kommer jag inte svara men tack ändå, du angav: \nnamn: " + name + " \nmejl: " + email + " \nmeddelande: " + message);
+    });

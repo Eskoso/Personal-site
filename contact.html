@@ -51,25 +51,26 @@
 
     <section class="get-in-touch">
         <h1 class="title">kontakt</h1>
-        <form class="contact-form row">
+        <form id="contactForm" class="contact-form row">
            <div class="form-field col x-50">
                <label for="name">Name: </label>
-              <input id="name" class="input-text" placeholder="Name" type="text" required>
+              <input id="name" class="input-text" placeholder="Name" name="name" type="text" required>
            </div>
            <div class="form-field col x-50">
                <label for="email">E-mail: </label>
-              <input id="email" class="input-text" placeholder="email" type="email" required>
+              <input id="email" class="input-text" placeholder="email" name="email" type="email" required>
            </div>
            <div class="form-field col x-100">
                <label for="message">Message: </label>
-               <textarea id="message" class="input-text textarea" placeholder="Message" ="text" required></textarea>
+               <textarea id="message" class="input-text textarea" name="message" placeholder="Message" required></textarea>
+        </div>
            </div>
            <div class="form-field col x-100 align-center">
-              <input class="submit-btn" data-hover-enabled="true" type="submit" value="Submit">
+              <input class="btn-main" data-hover-enabled="true" type="submit" value="Submit">
            </div>
         </form>
      </section>
 
-     <script src="/assets/scripts/script.js"></script>
+     <script src="assets/scripts/script.js"></script>
 </body>
 </html>
